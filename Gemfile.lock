@@ -2,18 +2,22 @@ GEM
   remote: https://rubygems.org/
   specs:
     base64 (0.2.0)
+    bigdecimal (3.1.9)
     jwt (2.10.1)
       base64
     multi_json (1.15.0)
     mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.7.4)
+    pg (1.5.9)
     puma (6.6.0)
       nio4r (~> 2.0)
     rack (2.2.13)
     rack-protection (3.1.0)
       rack (~> 2.2, >= 2.2.4)
     ruby2_keywords (0.0.5)
+    sequel (5.90.0)
+      bigdecimal
     sinatra (3.1.0)
       mustermann (~> 3.0)
       rack (~> 2.2, >= 2.2.4)
@@ -33,7 +37,9 @@ PLATFORMS
 
 DEPENDENCIES
   jwt (~> 2.8)
+  pg (~> 1.5)
   puma (~> 6.4)
+  sequel (~> 5.77)
   sinatra (~> 3.1.0)
   sinatra-contrib (~> 3.1.0)
 

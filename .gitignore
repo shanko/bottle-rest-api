@@ -37,6 +37,8 @@ Thumbs.db
 
 # Application specific
 auth.json
+data_files/
+.token
 
 # Ruby
 *.gem

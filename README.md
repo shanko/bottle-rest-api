@@ -17,13 +17,21 @@ bundle install
          "password": "your_password"
      }
      ```
-   - Set the `DEMO_SECRET_KEY` environment variable:
+   - Set the required environment variables:
      ```bash
      # On Unix/macOS:
      export DEMO_SECRET_KEY="your-secure-secret-key"
+     export DB_HOST="your-database-host"
+     export DB_NAME="your-database-name"
+     export DB_USER="your-database-user"
+     export DB_PASSWORD="your-database-password"
 
      # On Windows:
      set DEMO_SECRET_KEY=your-secure-secret-key
+     set DB_HOST=your-database-host
+     set DB_NAME=your-database-name
+     set DB_USER=your-database-user
+     set DB_PASSWORD=your-database-password
      ```
 
 3. Run the application:
@@ -36,6 +44,18 @@ bundle exec rackup -p 8080
 ```
 
 The server will start on `http://localhost:8080`
+
+## Environment Variables
+
+The application requires the following environment variables to be set:
+
+| Variable | Description |
+|----------|-------------|
+| `DEMO_SECRET_KEY` | Secret key for JWT token generation and validation |
+| `DB_HOST` | PostgreSQL database host |
+| `DB_NAME` | PostgreSQL database name |
+| `DB_USER` | PostgreSQL database user |
+| `DB_PASSWORD` | PostgreSQL database password |
 
 ## Authentication
 
