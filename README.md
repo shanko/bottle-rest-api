@@ -1,21 +1,15 @@
-# Bottle REST API
+# Sinatra REST API
 
-This is a REST API built using the Bottle Python framework.
+This is a REST API built using the Ruby Sinatra framework.
 
 ## Setup
 
-1. Create a virtual environment (recommended):
+1. Install dependencies:
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+bundle install
 ```
 
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Set up authentication:
+2. Set up authentication:
    - Create an `auth.json` file with your credentials:
      ```json
      {
@@ -32,9 +26,13 @@ pip install -r requirements.txt
      set DEMO_SECRET_KEY=your-secure-secret-key
      ```
 
-4. Run the application:
+3. Run the application:
 ```bash
-python app.py
+# Development mode
+ruby app.rb
+
+# Or using Rack
+bundle exec rackup -p 8080
 ```
 
 The server will start on `http://localhost:8080`
